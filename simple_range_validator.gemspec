@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "simple_range_validator"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
@@ -25,7 +25,12 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
+    "lib/array_types_validator.rb",
+    "lib/array_validator.rb",
     "lib/simple_range_validator.rb",
+    "simple_range_validator.gemspec",
+    "spec/array_types_validator_spec.rb",
+    "spec/array_validator_spec.rb",
     "spec/range_validator_spec.rb",
     "spec/spec_helper.rb"
   ]
