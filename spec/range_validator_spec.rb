@@ -2,7 +2,7 @@ require 'spec_helper'
 
 # http://jeffkreeftmeijer.com/2011/isolated-testing-for-custom-validators-in-rails-3/
 
-class Validatable
+class ValidatableRange
   include ActiveModel::Validations
 
   validates :cost, range: {within: 0..2000}
@@ -10,7 +10,7 @@ end
 
 describe RangeValidator do
 
-  subject { Validatable.new }
+  subject { ValidatableRange.new }
 
   context 'with a cost range that is not too expensive' do
 

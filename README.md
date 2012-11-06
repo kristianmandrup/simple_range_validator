@@ -1,6 +1,6 @@
 # Simple Range validator
 
-Validate fields of type `Range`
+Validate fields of type `Range`. Also contains simple validators for Array values and types respectively ;)
 
 ## Install
 
@@ -26,10 +26,10 @@ And here using `factory_girl` gem:
 
 ```ruby
 FactoryGirl.define do
-  sequence(:cost_range)         { [ (0..2000), (2000..4000), (4000..8000) ].sample }
+  sequence(:cost_range) { [ (0..2000), (2000..4000), (4000..8000) ].sample }
 
   factory :search do
-    cost         { FactoryGirl.generate(:cost_range) }
+    cost  { FactoryGirl.generate(:cost_range) }
   end
 end
 ```
@@ -43,6 +43,34 @@ Create a Search instance via factory (requires Factory Girl macros enabled):
 Also check out https://github.com/chrisb87/range_validator
 
 Could make sense to integrate both of these gems ;)
+
+## Array Validator
+
+```ruby
+class Search
+  include Mongoid::Document
+
+  field :color, type: Array
+
+  # you can also use only: as the option
+  validates :color, array:  {in: ['red', 'blue', 'green'] }
+end
+```
+
+## Array Type Validator
+
+```ruby
+class Search
+  include Mongoid::Document
+
+  field :color, type: Array
+
+  # you can also use in: as the option
+  validates :color, array_types:  {only: [String, Fixnum] }
+end
+```
+
+Simple as pie ;)
 
 ## Contributing to range_validator
  

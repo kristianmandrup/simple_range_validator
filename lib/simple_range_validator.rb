@@ -1,3 +1,5 @@
+require 'array_validator'
+
 class RangeValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     record.errors[attribute] << "must be within: #{show_range}" unless within? value
