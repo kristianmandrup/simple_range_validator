@@ -14,8 +14,8 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "range_validator"
-  gem.homepage = "http://github.com/kristianmandrup/mongoid-range_validator"
+  gem.name = "simple_range_validator"
+  gem.homepage = "http://github.com/kristianmandrup/simple_range_validator"
   gem.license = "MIT"
   gem.summary = %Q{Validate Range fields in your models}
   gem.description = %Q{Range validator for any Range model fields}
@@ -43,7 +43,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "range_validator #{version}"
+  rdoc.title = "simple_range_validator #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

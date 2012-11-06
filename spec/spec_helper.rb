@@ -1,3 +1,3 @@
 require 'rspec'
 require 'active_model'
-require 'range_validator'
+require 'simple_range_validator'

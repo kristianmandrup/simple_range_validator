@@ -1,10 +1,10 @@
-# Range validator
+# Simple Range validator
 
 Validate fields of type `Range`
 
 ## Install
 
-gem 'range_validator'
+gem 'simple_range_validator'
 
 ## Example usage
 
@@ -37,6 +37,12 @@ end
 Create a Search instance via factory (requires Factory Girl macros enabled):
 
 `create :search`
+
+## Notes
+
+Also check out https://github.com/chrisb87/range_validator
+
+Could make sense to integrate both of these gems ;)
 
 ## Contributing to range_validator
  
