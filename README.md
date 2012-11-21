@@ -70,6 +70,20 @@ class Search
 end
 ```
 
+## TimeSpan Validator
+
+```ruby
+class Search
+  include Mongoid::Document
+
+  field :period, type: Timespan
+
+  # you can also use in: as the option
+  validates :period, timespan:  {from: 1.day.ago, to: 14.days.from_now }
+end
+```
+
+
 Simple as pie ;)
 
 ## Contributing to range_validator
