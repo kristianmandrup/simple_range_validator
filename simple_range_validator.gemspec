@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "simple_range_validator"
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-11-06"
+  s.date = "2012-11-21"
   s.description = "Range validator for any Range model fields"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "lib/array_types_validator.rb",
     "lib/array_validator.rb",
     "lib/simple_range_validator.rb",
+    "lib/timespan_validator.rb",
     "simple_range_validator.gemspec",
     "spec/array_types_validator_spec.rb",
     "spec/array_validator_spec.rb",
